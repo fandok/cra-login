@@ -30,6 +30,13 @@ const Dashboard = (props) => {
       {orders.map((order, index) => (
         <li key={index}>{order.total_price}</li>
       ))}
+      <button
+        onClick={() => {
+          localStorage.removeItem("user");
+        }}
+      >
+        Logout
+      </button>
     </ul>
   );
 };
